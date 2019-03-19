@@ -1,6 +1,7 @@
 import Cookies from 'js-cookie'
 import axios from 'axios'
 import config from '../config'
+import './interface'
 
 axios.defaults.baseURL = config.baseUrl
 axios.defaults.headers.common['Authorization'] = Cookies.get('token')
@@ -13,7 +14,6 @@ function init (vm) {
 }
 
 function interceptorReq () {
-    console.log('interceptorReq')
     axios.interceptors.request.use(
         config => {
             return config
@@ -24,7 +24,6 @@ function interceptorReq () {
     )
 }
 function interceptorRes () {
-    console.log('interceptorRes')
     axios.interceptors.response.use(
         response => {
             return response

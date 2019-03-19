@@ -10,14 +10,14 @@
 
 export default {
   name: 'app',
-    data () {
-      return {
-         url: this.$store.state.baseUrl
-      }
-    },
-    mounted () {
-      this.$api.get()
-    },
+  data () {
+    return {
+       url: this.$store.state.baseUrl
+    }
+  },
+  mounted () {
+
+  },
   components: {
 
   }

@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 const api = {
     get : (params) => {
-        return 'axios'
+        return axios.get('/')
     }
 }
 
