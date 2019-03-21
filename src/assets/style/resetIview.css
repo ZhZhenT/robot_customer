@@ -1,0 +1,14 @@
+.menu-wrap .ivu-menu-vertical.ivu-menu-light:after{
+    display: none!important;
+}
+.menu-wrap .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+    color: #666666;
+    background: #eeeff3;
+}
+.menu-wrap .ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    color: #666666;
+    background: #eeeff3;
+}
+.menu-wrap .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after {
+    left: 0;
+}

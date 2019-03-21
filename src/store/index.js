@@ -6,7 +6,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        baseUrl: config.baseUrl
+        baseUrl: config.baseUrl,
+        username: 'xxx'
     },
     mutations: {
 

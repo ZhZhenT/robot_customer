@@ -2,14 +2,18 @@ import Main from '../views/main/main.vue'
 export default [
     {
         path: '/',
-        name: 'home',
+        name: 'root',
         component: Main,
         meta: {
 
         },
         children: [
-
-        ]
+            {
+                path: '/home',
+                name: 'home',
+                component: () => import('../views/home.vue')
+            }
+        ],
     },
     {
         path: '/403',
