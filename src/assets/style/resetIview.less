@@ -1,0 +1,64 @@
+.menu-wrap .ivu-menu-vertical.ivu-menu-light:after{
+    display: none!important;
+}
+.menu-wrap .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+    color: #666666;
+    background: #eeeff3;
+}
+.menu-wrap .ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    color: #666666;
+    background: #eeeff3;
+}
+
+
+.left-menu-wrap{
+    .ivu-menu{
+        position: absolute;
+        left: 0;
+        width: 200px!important;
+        background: #293542!important;
+        color: #ffffff!important;
+    }
+    .ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-vertical .ivu-menu-submenu-title:hover{
+        background: #212934!important;
+        color: #ffffff!important;
+    }
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+        background: #212934!important;
+        color: #ffffff!important;
+    }
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after{
+        background: transparent!important;
+        color: #ffffff!important;
+        z-index: 2;
+    }
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after {
+        left: 0;
+    }
+    .ivu-menu-vertical.ivu-menu-light:after{
+        width: 0!important;
+    }
+}
+
+.right-menu-wrap{
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after{
+        background: transparent!important;
+        color: #ffffff!important;
+        z-index: 2;
+    }
+    .ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-vertical .ivu-menu-submenu-title:hover{
+        color: #f0514c!important;
+        background: #f2f3f5!important;
+    }
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+        color: #f0514c!important;
+        background: #f2f3f5!important;
+    }
+    .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after {
+        left: 0;
+    }
+    .ivu-menu-vertical.ivu-menu-light:after{
+        width: 0!important;
+    }
+}
+

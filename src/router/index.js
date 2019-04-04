@@ -5,17 +5,19 @@ import iView from 'iview'
 
 Vue.use(VueRouter)
 
-
-
 const RouterConfig = {
-    routes: routes
+  routes: routes
 }
 
 const router = new VueRouter(RouterConfig)
 
+router.beforeEach((to, from, next) => {
+  iView.LoadingBar.start()
+  next()
+})
+
 router.afterEach(to => {
-    console.log(to)
-    iView.LoadingBar.finish()
+  iView.LoadingBar.finish()
 })
 
 export default router

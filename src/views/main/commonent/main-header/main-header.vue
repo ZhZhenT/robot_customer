@@ -1,7 +1,12 @@
 <template>
     <div class="user-dropdown-menu-con clearfix" >
-        <div class="logo-con">
-            <span>客服机器人</span>
+        <div :class="{ 'logo-wrap-sk': menuShrink }" class="logo-wrap">
+            <div v-show="!menuShrink" class="logo">
+                <span>客服机器人</span>
+            </div>
+        </div>
+        <div class="switch-Shrink-wrap">
+            <switchShrink></switchShrink>
         </div>
 
         <Row type="flex" justify="end" align="middle" class="user-dropdown-innercon">
@@ -17,59 +22,76 @@
             </Dropdown>
         </Row>
         <div style="float: right;height: 100%;color: #D0D0D0;display: flex;align-items: center;padding: 0 10px;font-size: 14px;font-style:italic">
-            版本号  2.2.1 RC
+            版本号  0.0.8 RC
         </div>
     </div>
 </template>
 
 <script>
-    import { mapState } from 'vuex'
-    export default {
-        name: 'main-header',
-        data () {
-          return {
+import { mapState } from 'vuex'
+import switchShrink from './switchShrink'
+export default {
+  name: 'main-header',
+  data () {
+    return {
 
-          }
-        },
-        computed: {
-            ...mapState(['username'])
-        },
-        methods: {
-            handleClickUserDropdown (name) {
-
-            }
-        },
-        mounted () {
-
-        }
     }
+  },
+  components: {
+    switchShrink
+  },
+  computed: {
+    ...mapState(['username', 'menuShrink'])
+  },
+  methods: {
+    handleClickUserDropdown (name) {
+
+    }
+  },
+  mounted () {
+
+  }
+}
 </script>
 
 <style lang="less"  scoped>
+
     .user-dropdown-menu-con{
-        left: 0px;
+        left: 0;
         position: absolute;
         right: 0;
         height: 64px;
-        background: #02223f;
-        box-shadow: 0 2px 1px 1px hsla(0,0%,39%,.1);
-        .logo-con{
+        // background: #02223f;
+        z-index: 10;
+        box-shadow: 0 0px 1px 1px hsla(0,0%,39%,.1);
+        .logo-wrap{
             float: left;
             height: 100%;
-            padding: 0;
-            line-height: 64px;
             width: 200px;
-            background: url("/images/logo.png") no-repeat;
-            background-size: 62px 30px;
-            background-position: 23px 15px;
-            padding-left: 90px;
-            padding-top: 4px;
+            background: #f35047;
+            transition: .5s;
+            .logo{
+                height: 100%;
+                padding: 0;
+                width: 200px;
+                line-height: 64px;
+                background: url("/images/logo.png") no-repeat;
+                background-size: 62px 30px;
+                background-position: 23px 15px;
+                padding-left: 90px;
+                padding-top: 4px;
+                transition: .5s;
+            }
             span{
                 color: #ffffff;
                 font-size: 18px;
                 font-weight: bold;
             }
 
+        }
+        .logo-wrap-sk{
+            width: 60px;
+            padding: 0;
         }
         .crumbs{
             float: left;
@@ -123,5 +145,12 @@
         }
 
     }
-
+.switch-Shrink-wrap{
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-right:1px solid #f4f4f4;
+}
 </style>

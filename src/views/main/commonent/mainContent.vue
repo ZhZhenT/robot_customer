@@ -7,9 +7,9 @@
 </template>
 
 <script>
-    export default {
-        name: 'mainContent'
-    }
+export default {
+  name: 'mainContent'
+}
 </script>
 
 <style lang="less" scoped>
@@ -26,6 +26,15 @@
     margin-top: 64px;
     transition: left 0.5s ease 0s;
     left: 200px;
-    padding: 10px;
+    .mainContent-scroll{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
+    .main-sk .mainContent{
+        left: 60px;
+    }
 </style>

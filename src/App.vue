@@ -6,12 +6,11 @@
 
 <script>
 
-
 export default {
   name: 'app',
   data () {
     return {
-       url: this.$store.state.baseUrl
+      url: this.$store.state.baseUrl
     }
   },
   mounted () {
@@ -22,4 +21,3 @@ export default {
   }
 }
 </script>
-
